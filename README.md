@@ -1,1 +1,1 @@
-# project-1
+# Global Pathways Consultancy website
