@@ -5,52 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Pathways Consultancy</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Global Pathways Consultancy</h1>
-        <p>Your Journey to Study Abroad Starts Here</p>
+        <p>Your Trusted Partner for Studying Abroad</p>
     </header>
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
     <main>
         <section id="home">
-            <h2>Welcome</h2>
-            <p>Explore the best study abroad opportunities with Global Pathways Consultancy. We guide you through every step of your journey, from university selection to visa approval, ensuring a seamless experience.</p>
-            <a href="#services" class="cta-button">Discover Our Services</a>
+            <h2>Welcome to Your Study Abroad Journey</h2>
+            <p>At Global Pathways Consultancy, we transform your dreams of studying abroad into reality. With personalized guidance, expert advice, and a passion for education, we help students worldwide secure admissions to top universities and navigate the complexities of international education.</p>
+            <p>Whether you're aiming for a prestigious university in the US, UK, Canada, Australia, or beyond, our dedicated team is here to support you every step of the way.</p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
         </section>
         <section id="services">
-            <h2>Our Services</h2>
+            <h2>Our Comprehensive Services</h2>
             <div class="services-container">
                 <div class="service-card">
                     <h3>University Applications</h3>
-                    <p>We assist in selecting the right universities and preparing standout applications to maximize your acceptance chances.</p>
+                    <p>Our experts help you select the best universities based on your academic profile and career aspirations. We craft compelling applications, including personal statements and recommendation letters, to boost your chances of acceptance.</p>
                 </div>
                 <div class="service-card">
                     <h3>Visa Assistance</h3>
-                    <p>Our experts provide step-by-step guidance to navigate the visa process smoothly and efficiently.</p>
+                    <p>Navigating visa requirements can be daunting. We provide detailed guidance on documentation, interview preparation, and application processes to ensure a smooth visa approval experience.</p>
                 </div>
                 <div class="service-card">
                     <h3>Career Counseling</h3>
-                    <p>Get personalized advice to align your academic choices with your career goals for a bright future.</p>
+                    <p>Our personalized counseling sessions align your academic choices with long-term career goals. We offer insights into global job markets and help you choose programs that enhance your employability.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Scholarship Guidance</h3>
+                    <p>We identify and assist with scholarship applications to make your study abroad journey more affordable, connecting you with funding opportunities worldwide.</p>
                 </div>
             </div>
         </section>
         <section id="contact">
-            <h2>Contact Us</h2>
+            <h2>Get in Touch</h2>
+            <p>Ready to start your study abroad adventure? Contact us today to schedule a consultation or ask any questions.</p>
             <p>Email: <a href="mailto:info@globalpathways.com">info@globalpathways.com</a></p>
             <p>Phone: +1 (123) 456-7890</p>
             <p>Address: 123 Study Abroad Lane, Global City, GC 12345</p>
+            <p>Follow us on social media for updates and success stories!</p>
+            <div class="social-links">
+                <a href="https://facebook.com/globalpathways" target="_blank" class="social-icon">Facebook</a>
+                <a href="https://instagram.com/globalpathways" target="_blank" class="social-icon">Instagram</a>
+                <a href="https://twitter.com/globalpathways" target="_blank" class="social-icon">Twitter</a>
+            </div>
         </section>
     </main>
     <a href="https://wa.me/1234567890?text=Hello!%20I%27m%20interested%20in%20study%20abroad%20consultancy." class="whatsapp" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" width="24"> Chat on WhatsApp
     </a>
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
