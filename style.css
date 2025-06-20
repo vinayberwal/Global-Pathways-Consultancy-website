@@ -3,34 +3,42 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #e6f3ff;
+    background: linear-gradient(to bottom, #e6f3ff, #f0f8ff);
     color: #2c3e50;
+    line-height: 1.6;
 }
 
 header {
-    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #2196f3);
     color: white;
-    padding: 50px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 60px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.8em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 3em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    animation: fadeInDown 1s ease-in-out;
 }
 
 header p {
-    margin: 10px 0;
-    font-size: 1.3em;
+    margin: 15px 0;
+    font-size: 1.4em;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 nav {
-    background: linear-gradient(90deg, #2c3e50, #34495e);
-    padding: 15px 0;
+    background: linear-gradient(90deg, #2c3e50, #1a252f);
+    padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -41,108 +49,120 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 0 25px;
+    margin: 0 30px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s, transform 0.3s;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffeb3b;
+    background: #ffeb3b;
+    color: #2c3e50;
     transform: scale(1.1);
 }
 
 section {
-    padding: 50px 20px;
-    margin: 20px auto;
-    max-width: 1100px;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 60px 20px;
+    margin: 30px auto;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-in-out;
 }
 
 section h2 {
     color: #e91e63;
-    font-size: 2.2em;
-    margin-bottom: 25px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 15px 35px;
     background: linear-gradient(45deg, #ff9800, #ff5722);
     color: white;
     text-decoration: none;
-    border-radius: 8px;
-    margin-top: 25px;
-    font-size: 1.1em;
-    transition: background 0.3s, transform 0.3s;
+    border-radius: 10px;
+    margin-top: 30px;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
     background: linear-gradient(45deg, #ff5722, #ff9800);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .services-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 .service-card {
-    background: linear-gradient(135deg, #ffffff, #f0f4f8);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff, #f9ebea);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     flex: 1;
     min-width: 280px;
-    max-width: 320px;
+    max-width: 300px;
     transition: transform 0.3s, box-shadow 0.3s;
-    border-left: 5px solid;
+    border-left: 6px solid;
     border-image: linear-gradient(45deg, #4ecdc4, #ff6b6b) 1;
+    animation: slideInUp 0.5s ease-in-out;
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .service-card h3 {
     color: #2196f3;
+    font-size: 1.7em;
     margin-top: 0;
-    font-size: 1.5em;
 }
 
 .service-card p {
     color: #34495e;
+    font-size: 1.1em;
 }
 
 .whatsapp {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 40px;
+    right: 40px;
     background: linear-gradient(45deg, #25D366, #00e676);
     color: white;
-    padding: 15px 25px;
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 50px;
     display: flex;
     align-items: center;
-    gap: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    gap: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    font-size: 1.1em;
+    font-weight: 600;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .whatsapp:hover {
-    transform: scale(1.15);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .whatsapp img {
@@ -150,22 +170,71 @@ section h2 {
     filter: brightness(0) invert(1);
 }
 
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #2196f3, #3f51b5);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    background: linear-gradient(45deg, #3f51b5, #2196f3);
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 600px) {
     nav ul li {
         display: block;
-        margin: 20px 0;
+        margin: 25px 0;
     }
 
-    header h1 {
-        font-size: 2em;
-    }
-
-    header p {
+    nav ul li a {
         font-size: 1.1em;
     }
 
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
     section {
-        padding: 30px 15px;
+        padding: 40px 15px;
+    }
+
+    section h2 {
+        font-size: 2em;
     }
 
     .services-container {
@@ -178,7 +247,12 @@ section h2 {
     }
 
     .whatsapp {
-        padding: 12px 20px;
-        font-size: 0.95em;
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .social-icon {
+        margin: 10px 10px;
+        padding: 8px 15px;
     }
 }
